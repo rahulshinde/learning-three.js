@@ -18,11 +18,56 @@
     /* Misc */    
 }
 
+/*  ================================================
+    HEADER
+    ================================================ */
+
+.header a:link,
+.header a:visited {
+	padding: 5px;
+	font-family: monospace;
+	font-size: 16px;
+	text-decoration: none;
+	border: 1px solid black;
+	color: black;
+	background-color: white;
+
+}
+
+.header a:hover{
+	color: white;
+	background-color: black;
+
+}
+
+.title-link {
+	position: fixed;
+	top: 3%;
+	left: 3%;
+}
+
+.back-link {
+	position: fixed;
+	bottom: 3%;
+	left: 3%;
+}
+
+.about-link {
+	position: fixed;
+	top: 3%;
+	right: 3%;
+}
+
+
+/*  ================================================
+    LINKS
+    ================================================ */  
+
 .links-wrap {
 	/* Positioning */
 	/* Box-model */
 	width: 80%;
-	margin: 50px auto;
+	margin: 7% auto;
 	/* Typography */
 	/* Visual */
 	border:6px solid rgba(0,255,200,1);
@@ -41,7 +86,7 @@
 	color: rgba(0,255,200,1);
 }
 
-.about {
+.text {
 	/* Positioning */
 	padding: 30px;
 	/* Box-model */
