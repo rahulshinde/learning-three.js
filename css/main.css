@@ -21,32 +21,35 @@
 .links-wrap {
 	/* Positioning */
 	/* Box-model */
-	width: 500px;
-	height: 300px;
-	margin: 100px auto;
+	width: 80%;
+	margin: 50px auto;
 	/* Typography */
-	text-align: center;
 	/* Visual */
 	border:6px solid rgba(0,255,200,1);
 	background-color: black;
 	/* Misc */  
 }
 
-a {
-	/* Positioning */
-    /* Box-model */
-    /* Typography */
-    text-decoration: underline;
-    /* Visual */
-    color: white;
-    /* Misc */  
+.links-wrap a:link,
+.links-wrap a:visited {
+	padding: 3px 4px 0 4px;
+	text-decoration: line-through;
+	color: white;
 }
 
-.link {
+.links-wrap a:hover {
+	color: rgba(0,255,200,1);
+}
+
+.about {
 	/* Positioning */
+	padding: 30px;
 	/* Box-model */
 	/* Typography */
 	font-family: 'Martel', serif;
+	font-size: 30px;
+	line-height: 40px;
 	/* Visual */
+	color: white;
 	/* Misc */
 }
