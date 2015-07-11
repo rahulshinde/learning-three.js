@@ -1,0 +1,52 @@
+/* Positioning */
+/* Box-model */
+/* Typography */
+/* Visual */
+/* Misc */  
+
+/*  =================================================================
+    BEGIN AUTHOR STYLING
+    ================================================================= */  
+
+.container  {
+    /* Positioning */
+    /* Box-model */
+    width: 100%;
+    max-height: 100%;
+    /* Typography */
+    /* Visual */
+    /* Misc */    
+}
+
+.links-wrap {
+	/* Positioning */
+	/* Box-model */
+	width: 500px;
+	height: 300px;
+	margin: 100px auto;
+	/* Typography */
+	text-align: center;
+	/* Visual */
+	border:6px solid rgba(0,255,200,1);
+	background-color: black;
+	/* Misc */  
+}
+
+a {
+	/* Positioning */
+    /* Box-model */
+    /* Typography */
+    text-decoration: underline;
+    /* Visual */
+    color: white;
+    /* Misc */  
+}
+
+.link {
+	/* Positioning */
+	/* Box-model */
+	/* Typography */
+	font-family: 'Martel', serif;
+	/* Visual */
+	/* Misc */
+}
