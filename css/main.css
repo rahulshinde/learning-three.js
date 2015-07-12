@@ -31,7 +31,8 @@ canvas {
     ================================================ */
 
 .header a:link,
-.header a:visited {
+.header a:visited,
+.title-link {
 	padding: 5px;
 	font-family: monospace;
 	font-size: 16px;
@@ -52,6 +53,8 @@ canvas {
 	position: fixed;
 	top: 3%;
 	left: 3%;
+	background-color: black;
+	color: white;
 }
 
 .back-link {
@@ -63,6 +66,12 @@ canvas {
 .about-link {
 	position: fixed;
 	top: 3%;
+	right: 3%;
+}
+
+.docs-link {
+	position: fixed;
+	bottom: 3%;
 	right: 3%;
 }
 
@@ -86,12 +95,14 @@ canvas {
 .links-wrap a:link,
 .links-wrap a:visited {
 	padding: 3px 4px 0 4px;
-	text-decoration: line-through;
+	text-decoration: none;
+	background-color: rgba(60,60,60,1);
 	color: white;
 }
 
 .links-wrap a:hover {
 	color: rgba(0,255,200,1);
+	background-color: white;
 }
 
 .text {
@@ -101,7 +112,7 @@ canvas {
 	/* Typography */
 	font-family: 'Martel', serif;
 	font-size: 30px;
-	line-height: 40px;
+	line-height: 52px;
 	/* Visual */
 	color: white;
 	/* Misc */
