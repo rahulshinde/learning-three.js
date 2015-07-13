@@ -54,6 +54,7 @@ canvas {
 	top: 3%;
 	left: 3%;
 	background-color: black;
+	border-color:white;
 	color: white;
 }
 
@@ -84,7 +85,7 @@ canvas {
 	/* Positioning */
 	/* Box-model */
 	width: 80%;
-	margin: 7% auto;
+	margin: 35px auto;
 	/* Typography */
 	/* Visual */
 	background-color: black;
