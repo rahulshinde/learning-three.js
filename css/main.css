@@ -87,14 +87,13 @@ canvas {
 	margin: 7% auto;
 	/* Typography */
 	/* Visual */
-	border:6px solid rgba(0,255,200,1);
 	background-color: black;
 	/* Misc */  
 }
 
 .links-wrap a:link,
 .links-wrap a:visited {
-	padding: 3px 4px 0 4px;
+	padding: 3px 4px 3px 4px;
 	text-decoration: none;
 	background-color: rgba(60,60,60,1);
 	color: white;
@@ -110,9 +109,9 @@ canvas {
 	padding: 30px;
 	/* Box-model */
 	/* Typography */
-	font-family: 'Martel', serif;
+	font-family: 'Habibi', serif;
 	font-size: 30px;
-	line-height: 52px;
+	line-height: 50px;
 	/* Visual */
 	color: white;
 	/* Misc */
