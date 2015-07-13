@@ -1,0 +1,59 @@
+/* Positioning */
+/* Box-model */
+/* Typography */
+/* Visual */
+/* Misc */
+
+canvas {
+	border: 2px solid blue;
+	box-shadow: 0 5px 7px rgba(0,0,0,0.5);
+}
+
+.text-box {
+	/* Positioning */
+	/* Box-model */
+	width: 60%;
+	margin: 30px auto;
+	padding: 10px;
+	/* Typography */
+	font-size: 18px;
+	text-align: center;
+	/* Visual */
+	border: 1px solid blue;
+	/* Misc */
+
+}
+
+.text-block {
+	/* Positioning */
+	float: left;
+	/* Box-model */
+	width: 300px;
+	margin-top: 0;
+	margin-left: 10px;
+	margin-right: 30px;
+	padding: 10px;
+	/* Typography */
+	font-size: 18px;
+	font-family: sans-serif;
+	font-style: italic;
+	font-weight: bolder;
+
+	/* Visual */
+	border: 3px solid blue;
+	/* Misc */
+}
+
+#environment-container {
+	/* Positioning */
+	float: left;
+	/* Box-model */
+	width: 300px;
+	height:400px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+	margin-right: 40px;
+	/* Typography */
+	/* Visual */
+	/* Misc */  
+}
