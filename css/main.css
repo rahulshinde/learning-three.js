@@ -46,6 +46,7 @@ canvas {
 .header a:hover{
 	color: white;
 	background-color: black;
+	border: 1px solid white;
 
 }
 
@@ -84,8 +85,8 @@ canvas {
 .links-wrap {
 	/* Positioning */
 	/* Box-model */
-	width: 80%;
-	margin: 35px auto;
+	width: 100%;
+	margin: 0 auto;
 	/* Typography */
 	/* Visual */
 	background-color: black;
@@ -101,13 +102,13 @@ canvas {
 }
 
 .links-wrap a:hover {
-	color: rgba(0,255,200,1);
-	background-color: white;
+	color: rgba(255,255,255,1);
+	background-color: rgba(255,0,0,1);
 }
 
 .text {
 	/* Positioning */
-	padding: 30px;
+	padding: 70px 60px;
 	/* Box-model */
 	/* Typography */
 	font-family: 'Habibi', serif;
