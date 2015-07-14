@@ -46,7 +46,7 @@ canvas {
 .header a:hover{
 	color: white;
 	background-color: black;
-	border: 1px solid white;
+	border: 1px solid rgba(0,255,200,1);
 
 }
 
@@ -103,7 +103,7 @@ canvas {
 
 .links-wrap a:hover {
 	color: rgba(255,255,255,1);
-	background-color: rgba(255,0,0,1);
+	background-color: rgba(0,255,200,1);
 }
 
 .text {
