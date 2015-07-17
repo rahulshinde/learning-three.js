@@ -15,6 +15,8 @@ function init() {
 
 	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
 
+	camera.position.z = 100;
+
 	scene = new THREE.Scene();
 
 	var geometry = new THREE.BoxGeometry( 50, 30, 40 );
@@ -98,20 +100,19 @@ function animate() {
 
 	requestAnimationFrame( animate );
 	render();
-	stats.update();
 
 }
 
 function render() {
 
-	theta += 0.1;
+	// theta += 0.1;
 
-	camera.position.x = radius * Math.sin( THREE.Math.degToRad( theta ) );
-	camera.position.y = radius * Math.sin( THREE.Math.degToRad( theta ) );
-	camera.position.z = radius * Math.cos( THREE.Math.degToRad( theta ) );
-	camera.lookAt( scene.position );
+	// camera.position.x = radius * Math.sin( THREE.Math.degToRad( theta ) );
+	// camera.position.y = radius * Math.sin( THREE.Math.degToRad( theta ) );
+	// camera.position.z = radius * Math.cos( THREE.Math.degToRad( theta ) );
+	// camera.lookAt( scene.position );
 
-	camera.updateMatrixWorld();
+	// camera.updateMatrixWorld();
 
 
 				// find intersections
