@@ -32,6 +32,16 @@ function init() {
     scene.add( cube );
 	objects.push( cube );
 
+	cube1 = new THREE.Mesh( geometry, material );
+	cube1.userData = {
+    	URL: "http://reddit.com"
+    };
+
+    cube1.position.set(60,0,0);
+
+    scene.add( cube1 );
+	objects.push( cube1 );
+
 	var light1 = new THREE.PointLight( 0xffffff, 1, 4500 );
 	light1.position.set( 0, 10, 50 );
 	scene.add( light1 );
@@ -46,8 +56,6 @@ function init() {
 	document.body.appendChild( renderer.domElement );
 
 	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-	document.addEventListener('mousedown', onDocumentMouseDown, false);
-
 	window.addEventListener( 'resize', onWindowResize, false );
 
 }
@@ -70,32 +78,6 @@ function onDocumentMouseMove( event ) {
 
 }
 
-function onDocumentMouseDown(event) {
-    event.preventDefault();
-    var intersects = raycaster.intersectObjects( scene.children );
-
-	if ( intersects.length > 0 ) {
-
-		if ( INTERSECTED != intersects[ 0 ].object ) {
-
-			if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
-
-			INTERSECTED = intersects[ 0 ].object;
-			INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
-			INTERSECTED.material.emissive.setHex( 0xff0000 );
-			window.open(intersects[0].object.userData.URL,"_self");
-
-		}
-
-	} else {
-
-		if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
-
-		INTERSECTED = null;
-
-	}
-}
-
 			//
 
 function animate() {
@@ -107,9 +89,9 @@ function animate() {
 
 function render() {
 
-	theta += 0.1;
-
 	cube.rotation.x += 0.005;
+
+	cube1.rotation.x -= 0.005;
 
 	camera.updateMatrixWorld();
 
