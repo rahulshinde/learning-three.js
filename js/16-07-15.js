@@ -3,6 +3,8 @@
 var container, stats;
 var camera, scene, raycaster, renderer;
 
+var cube;
+
 var mouse = new THREE.Vector2(), INTERSECTED;
 var radius = 100, theta = 0;
 
@@ -22,7 +24,7 @@ function init() {
 	var geometry = new THREE.BoxGeometry( 50, 30, 40 );
 	var material = new THREE.MeshPhongMaterial({color: 0x696969, emissive: 0x696969, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
 
-	var cube = new THREE.Mesh( geometry, material );
+	cube = new THREE.Mesh( geometry, material );
 	cube.userData = {
     	URL: "http://google.com"
     };
@@ -105,17 +107,14 @@ function animate() {
 
 function render() {
 
-	// theta += 0.1;
+	theta += 0.1;
 
-	// camera.position.x = radius * Math.sin( THREE.Math.degToRad( theta ) );
-	// camera.position.y = radius * Math.sin( THREE.Math.degToRad( theta ) );
-	// camera.position.z = radius * Math.cos( THREE.Math.degToRad( theta ) );
-	// camera.lookAt( scene.position );
+	cube.rotation.x += 0.005;
 
-	// camera.updateMatrixWorld();
+	camera.updateMatrixWorld();
 
 
-				// find intersections
+	// find intersections
 
 	raycaster.setFromCamera( mouse, camera );
 
