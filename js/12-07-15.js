@@ -1,3 +1,5 @@
+//12.07.15
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, 300 / 400, 0.1, 1000);
 
