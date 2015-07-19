@@ -15,13 +15,13 @@ document.body.appendChild( renderer.domElement );
 
 camera.position.z = 100;
 
-// cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
-// cameraControls.target.set( 0, 0, 0);
-// cameraControls.maxDistance = 400;
-// cameraControls.minDistance = 10;
-// cameraControls.update();
+cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
+cameraControls.target.set( 0, 0, 0);
+cameraControls.maxDistance = 400;
+cameraControls.minDistance = 30;
+cameraControls.update();
 
-var geometry = new THREE.BoxGeometry( 50, 30, 40 );
+var geometry = new THREE.BoxGeometry( 20, 30, 40 );
 var material1 = new THREE.MeshPhongMaterial({color: 0x696969, emissive: 0x696969, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
 
 var material2 = new THREE.MeshPhongMaterial({color: 0x696969, emissive: 0x696969, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
@@ -33,18 +33,16 @@ var cube1 = new THREE.Mesh( geometry, material1 );
 scene.add( cube1 );
 
 var cube2 = new THREE.Mesh( geometry, material2 );
-cube2.position.set(60, 0, 0);
+cube2.position.set(40, 30, 30);
 scene.add( cube2 );
 
 
 var cube3 = new THREE.Mesh( geometry, material3 );
-cube3.position.set(-60, 0, 0);
+cube3.position.set(-80, 0, -50);
 scene.add( cube3 );
 
-cube2.position.set(60, 0, 0);
-
-var light1 = new THREE.PointLight( 0xffffff, 1, 4500 );
-light1.position.set( 0, 10, 50 );
+var light1 = new THREE.PointLight( 0xffffff, 0.4, 7500 );
+light1.position.set( 0, 10, 100 );
 scene.add( light1 );
 
 
@@ -89,7 +87,11 @@ function render() {
 
 	cube1.rotation.x += 0.001;
 	cube1.rotation.y += 0.01;
-	// cube1.rotation.z += 0.01;
+
+	cube2.rotation.y += 0.005;
+
+	cube3.rotation.x += 0.001;
+	cube3.rotation.z += 0.02;
 
 	cube1.material.emissive.setHex(color1);
 	cube2.material.emissive.setHex(color2);
@@ -97,4 +99,12 @@ function render() {
 
 	renderer.render( scene, camera );
 }
-render();
+
+
+function update() {
+	cameraControls.update();
+	render();
+}
+
+
+update();
