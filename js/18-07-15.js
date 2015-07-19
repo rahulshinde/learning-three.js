@@ -75,7 +75,7 @@ function onDocumentMouseMove( event ) {
     }
 
     if ($('#link-title3:hover').length > 0) {
-        color3 = '0xFFC0CB';
+        color3 = '0x00FF7F';
     } else {
     	color3 = '0x696969';
     }
