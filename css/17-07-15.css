@@ -8,9 +8,7 @@ canvas {
 
 }
 
-#container1,
-#container2,
-#container3 {
+#container1 {
 	/* Positioning */
 	float: left;
 	/* Box-model */
