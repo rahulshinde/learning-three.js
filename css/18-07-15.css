@@ -1,0 +1,28 @@
+/* Positioning */
+/* Box-model */
+/* Typography */
+/* Visual */
+/* Misc */
+
+canvas {
+
+}
+
+#container1 {
+	/* Positioning */
+	float: left;
+	/* Box-model */
+	width: 300px;
+	height:400px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+	margin-right: 40px;
+	/* Typography */
+	/* Visual */
+	/* Misc */  
+}
+
+.container-link {
+	width: 300px;
+	height: 400px;
+}
