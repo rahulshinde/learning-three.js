@@ -133,3 +133,17 @@
 .pop-up3:hover + .pop-up2 {
 	display: block;
 }
+
+/* ================================
+		SECTION 3
+   ================================ */
+
+.section3 {
+	/* Positioning */
+	/* Box-model */
+	width: 80%;
+	margin: 0 auto 50px auto;
+	/* Typography */
+	/* Visual */
+	/* Misc */
+}
