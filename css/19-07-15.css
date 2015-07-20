@@ -22,6 +22,18 @@
 	/* Misc */
 }
 
+.img {
+	margin-bottom: 30px;
+}
+
+.img:hover + .pop-up1 {
+	display: block;
+}
+
+.heading {
+	text-align: center;
+}
+
 /* ================================
 		SECTION 1
    ================================ */
