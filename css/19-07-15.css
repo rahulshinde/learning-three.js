@@ -1,0 +1,135 @@
+/* =============================================
+		+++ 19.07.15 +++
+   ============================================= */
+
+/* Positioning */
+/* Box-model */
+/* Typography */
+/* Visual */
+/* Misc */
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+.large-image {
+	/* Positioning */
+	/* Box-model */
+	width: 100%;
+	/* Typography */
+	/* Visual */
+	/* Misc */
+}
+
+/* ================================
+		SECTION 1
+   ================================ */
+
+.section1 {
+	/* Positioning */
+	/* Box-model */
+	width: 80%;
+	margin: 0 auto;
+	/* Typography */
+	/* Visual */
+	/* Misc */
+}
+
+.pop-up1 {
+	/* Positioning */
+	position: fixed;
+	top: 20%;
+	left: 20%;
+	/* Box-model */
+	width: 40%;
+	padding: 30px;
+	/* Typography */
+	/* Visual */
+	display: none;
+	background-color: white;
+	border: 3px solid red;
+	/* Misc */
+}
+
+.img1:hover + .pop-up1 {
+	display: block;
+}
+
+.pop-up1:hover {
+	display: block;
+}
+
+/* ================================
+		SECTION 2
+   ================================ */
+
+.section2 {
+	/* Positioning */
+	/* Box-model */
+	width: 90%;
+	margin: 30px auto;
+	/* Typography */
+	/* Visual */
+	/* Misc */
+}
+
+.img2 {
+	/* Positioning */
+	/* Box-model */
+	width: 30%;
+	margin-right: 1%;
+	/* Typography */
+	/* Visual */
+	/* Misc */
+}
+
+.img3 {
+	/* Positioning */
+	/* Box-model */
+	width: 67%;
+	/* Typography */
+	/* Visual */
+	/* Misc */
+}
+
+.pop-up2 {
+	/* Positioning */
+	position: fixed;
+	top: 20%;
+	right: 5%;
+	/* Box-model */
+	/* Typography */
+	/* Visual */
+	display: none;
+	/* Misc */
+}
+
+.pop-up3 {
+	/* Positioning */
+	position: fixed;
+	top: 30%;
+	left: 5%;
+	/* Box-model */
+	width: 60%;
+	/* Typography */
+	/* Visual */
+	display: none;
+	/* Misc */
+}
+
+.img3:hover + .pop-up2 {
+	display: block;
+}
+
+.pop-up2:hover + .pop-up3 {
+	display: block;
+}
+
+.pop-up2:hover {
+	display: block;
+}
+
+.pop-up3:hover + .pop-up2 {
+	display: block;
+}
