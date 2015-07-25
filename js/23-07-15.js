@@ -20,7 +20,7 @@ var material2 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('
 var cube2 = new THREE.Mesh( geometry2, material2 );
 cube2
 cube2.position.set(-50,0,0);
-cube2.rotation.y = 11;
+cube2.rotation.y = 10.5;
 scene.add( cube2 );
 
 var light = new THREE.AmbientLight( 0x404040 ); // soft white light
