@@ -1,0 +1,138 @@
+/* Positioning */
+/* Box-model */
+/* Typography */
+/* Visual */
+/* Misc */  
+
+/*  =================================================================
+    BEGIN AUTHOR STYLING
+    ================================================================= */
+
+body { 
+	margin: 0; 
+}
+
+canvas { 
+	width: 100%; height: 100% 
+}
+
+.container  {
+    /* Positioning */
+    /* Box-model */
+    width: 100%;
+    max-height: 100%;
+    /* Typography */
+    /* Visual */
+    /* Misc */    
+}
+
+.intro {
+    /* Positioning */
+    margin: 80px auto;
+    /* Box-model */
+    width: 70%;
+    /* Typography */
+    /* Visual */
+    overflow:hidden;
+    border: 2px solid pink;
+    border-radius: 9px;
+    background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, blue); /* Standard syntax */ 
+    /* Misc */  
+}
+
+.controls {
+    /* Positioning */
+    margin: 10px auto;
+    /* Box-model */
+    padding: 2%;
+    width: 70%;
+    /* Typography */
+    font-size: 21px;
+    font-family: 'Avenir Next', 'San Serif';
+    text-indent: -6px;
+    /* Visual */
+    color: white;
+    /* Misc */ 
+}
+
+.text {
+    /* Positioning */
+    margin: 20px auto;
+    /* Box-model */
+    padding: 2%;
+    width: 70%;
+    /* Typography */
+    font-size: 21px;
+    font-family: 'Avenir Next', 'San Serif';
+    text-indent: -6px;
+    /* Visual */
+    color: white;
+    /* Misc */ 
+}
+
+.author {
+    /* Positioning */
+    /* Box-model */
+    padding-left: 40px;
+    /* Typography */
+    font-style: italic;
+    /* Visual */
+    /* Misc */
+}
+
+.back {
+    /* Positioning */
+    float: left;
+    /* Box-model */
+    padding: 2px 1%;
+    margin-left: 4%;
+    margin-bottom: 20px;
+    /* Typography */
+    /* Visual */
+    /* Misc */ 
+}
+
+.back:link,
+.back:visited,
+#enter {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
+    text-decoration: none;
+    font-size: 14px;
+    font-family: monospace;
+    letter-spacing: 5px;
+    /* Visual */
+    color: white;
+    border: 1px solid white;
+    /* Misc */ 
+}
+
+.back:hover,
+#enter:hover {
+    /* Positioning */
+    /* Box-model */
+    /* Typography */
+    /* Visual */
+    color: blue;
+    background-color: white;
+    /* Misc */ 
+}
+
+#enter {
+    /* Positioning */
+    float: right;
+    /* Box-model */
+    padding: 2px 1%;
+    margin-right: 4%;
+    /* Typography */
+    /* Visual */
+    /* Misc */ 
+}
+
+#three-container {
+    display: none;
+}
