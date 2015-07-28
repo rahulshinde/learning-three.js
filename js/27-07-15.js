@@ -18,6 +18,32 @@ var material = new THREE.MeshPhongMaterial({color: 0x696969, emissive: 0x696969,
 var cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
+///////////////
+//Adding Text//
+///////////////
+
+var materialFront = new THREE.MeshPhongMaterial({color: 0x696969, emissive: 0x696969, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
+var materialSide = new THREE.MeshPhongMaterial({color: 0x0000FF, emissive: 0x696969, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
+var materialArray = [ materialFront, materialSide ];
+var textGeom = new THREE.TextGeometry( "Happy Birthday", 
+{
+	size: 20, height: 4, curveSegments: 5,
+	font: "gentilis",
+	bevelThickness: 0.5, bevelSize: 0.5, bevelEnabled: true,
+	material: 0, extrudeMaterial: 1
+});
+	// font: helvetiker, gentilis, droid sans, droid serif, optimer
+	// weight: normal, bold
+	
+var textMaterial = new THREE.MeshFaceMaterial(materialArray);
+var textMesh = new THREE.Mesh(textGeom, textMaterial );
+
+textGeom.computeBoundingBox();
+var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
+
+textMesh.position.set( -0.5 * textWidth, 0, 0 );
+scene.add(textMesh);
+
 var light1 = new THREE.PointLight( 0xffffff, 1, 4500 );
 light1.position.set( 0, 10, 50 );
 scene.add( light1 );
