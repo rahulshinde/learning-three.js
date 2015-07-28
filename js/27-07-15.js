@@ -28,10 +28,10 @@ scene.add( cube );
 //Adding Sphere///
 //////////////////
 var geometry2 = new THREE.SphereGeometry( 15, 32, 32 );
-var material2 = new THREE.MeshPhongMaterial({ color: 0x696969, emissive: 0x0000FF, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
+var material2 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('../textures/cs-back.gif') , specular:0x696969, shininess: 15, side: THREE.DoubleSide});
 
 var sphere = new THREE.Mesh( geometry2, material2 );
-sphere.position.set(20, -20, 40);
+sphere.position.set(20, -40, 40);
 scene.add( sphere );
 
 ///////////////
@@ -158,6 +158,9 @@ function render() {
 	}
 
 	textMesh.rotation.x += 0.01;
+
+	sphere.rotation.x += 0.002;
+	sphere.rotation.y += 0.01;
 
 
 	renderer.render( scene, camera );
