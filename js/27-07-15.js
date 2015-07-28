@@ -24,6 +24,16 @@ cube.position.set(-40, 0, -40)
 cube.rotation.y = 1;
 scene.add( cube );
 
+//////////////////
+//Adding Sphere///
+//////////////////
+var geometry2 = new THREE.SphereGeometry( 15, 32, 32 );
+var material2 = new THREE.MeshPhongMaterial({ color: 0x696969, emissive: 0x0000FF, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
+
+var sphere = new THREE.Mesh( geometry2, material2 );
+sphere.position.set(20, -20, 40);
+scene.add( sphere );
+
 ///////////////
 //Adding Text//
 ///////////////
@@ -73,10 +83,6 @@ function onWindowResize() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 
 }
-
-////////////////////////////////
-//Calculating Forward Movement//
-////////////////////////////////
 
 function render() {
 	requestAnimationFrame( render );
