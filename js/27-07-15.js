@@ -13,6 +13,17 @@ var renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize( window.innerWidth, window.innerHeight );
 container.appendChild( renderer.domElement );
 
+//////////////////
+//Adding Flowers//
+//////////////////
+
+var material = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('../textures/rudbekia.jpg') , shininess: 15, side: THREE.DoubleSide});
+var geometry = new THREE.BoxGeometry( 60, 50, 3 );
+var cube = new THREE.Mesh( geometry, material );
+cube.position.set(-40, 0, -40)
+cube.rotation.y = 1;
+scene.add( cube );
+
 ///////////////
 //Adding Text//
 ///////////////
@@ -41,6 +52,9 @@ scene.add( textMesh );
 /////////////////
 //Adding Lights//
 /////////////////
+
+var light = new THREE.AmbientLight( 0x404040 ); // soft white light
+scene.add( light );
 
 var light1 = new THREE.PointLight( 0xffffff, 1, 4500 );
 light1.position.set( 0, 10, 50 );
