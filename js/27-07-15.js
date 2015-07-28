@@ -13,11 +13,6 @@ var renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize( window.innerWidth, window.innerHeight );
 container.appendChild( renderer.domElement );
 
-var geometry = new THREE.BoxGeometry( 50, 30, 40 );
-var material = new THREE.MeshPhongMaterial({color: 0x696969, emissive: 0x696969, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
-var cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
-
 ///////////////
 //Adding Text//
 ///////////////
@@ -37,10 +32,15 @@ var textMaterial = new THREE.MeshFaceMaterial(materialArray);
 var textMesh = new THREE.Mesh(textGeom, textMaterial );
 
 textGeom.computeBoundingBox();
+
 var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
 
 textMesh.position.set( -0.5 * textWidth, 0, 0 );
-scene.add(textMesh);
+scene.add( textMesh );
+
+/////////////////
+//Adding Lights//
+/////////////////
 
 var light1 = new THREE.PointLight( 0xffffff, 1, 4500 );
 light1.position.set( 0, 10, 50 );
@@ -105,12 +105,8 @@ function render() {
 		camera.rotation.y -= 0.02;
 	}
 
+	textMesh.rotation.x += 0.01;
 
-	textMesh.rotation.x += 0.01;;
-
-	cube.rotation.x += 0.001;
-	cube.rotation.y += 0.01;
-	// cube.rotation.z += 0.01;
 
 	renderer.render( scene, camera );
 }
