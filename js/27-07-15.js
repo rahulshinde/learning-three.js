@@ -1,5 +1,7 @@
 //27.07.15
 
+var keyboard = new KeyboardState();
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -22,6 +24,48 @@ scene.add( light1 );
 
 function render() {
 	requestAnimationFrame( render );
+	keyboard.update();
+
+	//WASD
+	if(keyboard.pressed('W')) {
+		camera.position.z -= 1;
+	}
+
+	if(keyboard.pressed('A')) {
+		camera.rotation.y += 0.02;
+	}
+
+	if(keyboard.pressed('S')) {
+		camera.position.z += 1;
+	}
+
+	if(keyboard.pressed('D')) {
+		camera.rotation.y -= 0.02;
+	}
+
+	//Arrow Keys
+	if(keyboard.pressed('up')) {
+		camera.position.z -= 1;
+	}
+
+	if(keyboard.pressed('left')) {
+		var radians = camera.rotation.y;
+
+		camera.rotation.y += 0.02;
+
+		var degrees = radians * (180/Math.PI);
+		console.log(degrees);
+	}
+
+	if(keyboard.pressed('down')) {
+		camera.position.z += 1;
+	}
+
+	if(keyboard.pressed('right')) {
+		camera.rotation.y -= 0.02;
+	}
+
+
 
 	cube.rotation.x += 0.001;
 	cube.rotation.y += 0.01;
