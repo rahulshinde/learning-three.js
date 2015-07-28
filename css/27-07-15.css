@@ -103,7 +103,8 @@ canvas {
 
 .back:link,
 .back:visited,
-#enter {
+#enter,
+#close {
     /* Positioning */
     /* Box-model */
     /* Typography */
@@ -118,7 +119,8 @@ canvas {
 }
 
 .back:hover,
-#enter:hover {
+#enter:hover,
+#close:hover {
     /* Positioning */
     /* Box-model */
     /* Typography */
@@ -126,6 +128,7 @@ canvas {
     color: blue;
     background-color: white;
     /* Misc */ 
+    cursor: pointer;
 }
 
 #enter {
@@ -141,4 +144,21 @@ canvas {
 
 #three-container {
     display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#close {
+    /* Positioning */
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    /* Box-model */
+    padding: 2px 1%;
+    display: none;
+    /* Typography */
+    /* Visual */
+    background-color: red;
+    /* Misc */ 
+
 }
