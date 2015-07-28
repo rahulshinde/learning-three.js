@@ -45,27 +45,33 @@ canvas {
 
 .controls {
     /* Positioning */
-    margin: 10px auto;
+    margin: 30px auto 0px auto;
     /* Box-model */
     padding: 2%;
-    width: 70%;
+    width: 80%;
     /* Typography */
-    font-size: 21px;
+    text-align: center;
+    font-size: 24px;
     font-family: 'Avenir Next', 'San Serif';
-    text-indent: -6px;
     /* Visual */
+    border: 1px solid white;
     color: white;
     /* Misc */ 
 }
 
+.italic {
+    letter-spacing: 7px;
+    font-style: italic;
+}
+
 .text {
     /* Positioning */
-    margin: 20px auto;
+    margin: 30px auto;
     /* Box-model */
-    padding: 2%;
     width: 70%;
     /* Typography */
-    font-size: 21px;
+    font-size: 18px;
+    line-height: 22px;
     font-family: 'Avenir Next', 'San Serif';
     text-indent: -6px;
     /* Visual */
