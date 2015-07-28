@@ -119,8 +119,7 @@ canvas {
 }
 
 .back:hover,
-#enter:hover,
-#close:hover {
+#enter:hover {
     /* Positioning */
     /* Box-model */
     /* Typography */
@@ -158,7 +157,15 @@ canvas {
     display: none;
     /* Typography */
     /* Visual */
-    background-color: red;
+    color: red;
+    border: 1px solid red;
     /* Misc */ 
 
+}
+
+#close:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border: 0px;
 }
