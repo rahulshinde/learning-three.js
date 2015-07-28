@@ -84,7 +84,16 @@ function render() {
 
 	//WASD
 	if(keyboard.pressed('W')) {
-		camera.position.z -= 1;
+		var radians = camera.rotation.y;
+		var degrees = radians * (180/Math.PI);
+		if (degrees > 90 || degrees < -90) {
+			camera.position.z += 1
+		}
+
+		else {
+			camera.position.z -= 1;
+		}
+		
 	}
 
 	if(keyboard.pressed('A')) {
@@ -92,7 +101,16 @@ function render() {
 	}
 
 	if(keyboard.pressed('S')) {
-		camera.position.z += 1;
+		var radians = camera.rotation.y;
+		var degrees = radians * (180/Math.PI);
+		if (degrees > 90 || degrees < -90) {
+			camera.position.z -= 1
+		}
+
+		else {
+			camera.position.z += 1;
+		}
+		
 	}
 
 	if(keyboard.pressed('D')) {
@@ -101,7 +119,15 @@ function render() {
 
 	//Arrow Keys
 	if(keyboard.pressed('up')) {
-		camera.position.z -= 1;
+		var radians = camera.rotation.y;
+		var degrees = radians * (180/Math.PI);
+		if (degrees > 90 || degrees < -90) {
+			camera.position.z += 1
+		}
+
+		else {
+			camera.position.z -= 1;
+		}
 	}
 
 	if(keyboard.pressed('left')) {
@@ -110,7 +136,15 @@ function render() {
 	}
 
 	if(keyboard.pressed('down')) {
-		camera.position.z += 1;
+		var radians = camera.rotation.y;
+		var degrees = radians * (180/Math.PI);
+		if (degrees > 90 || degrees < -90) {
+			camera.position.z -= 1
+		}
+
+		else {
+			camera.position.z += 1;
+		}
 	}
 
 	if(keyboard.pressed('right')) {
