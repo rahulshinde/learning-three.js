@@ -74,7 +74,9 @@ function onWindowResize() {
 
 }
 
-
+////////////////////////////////
+//Calculating Forward Movement//
+////////////////////////////////
 
 function render() {
 	requestAnimationFrame( render );
@@ -103,12 +105,8 @@ function render() {
 	}
 
 	if(keyboard.pressed('left')) {
-		var radians = camera.rotation.y;
 
 		camera.rotation.y += 0.02;
-
-		var degrees = radians * (180/Math.PI);
-		console.log(degrees);
 	}
 
 	if(keyboard.pressed('down')) {
