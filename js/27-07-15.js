@@ -18,11 +18,21 @@ container.appendChild( renderer.domElement );
 //////////////////
 
 var material = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('../textures/rudbekia.jpg') , shininess: 15, side: THREE.DoubleSide});
-var geometry = new THREE.BoxGeometry( 60, 50, 3 );
+var geometry = new THREE.BoxGeometry( 60, 50, 2 );
 var cube = new THREE.Mesh( geometry, material );
 cube.position.set(-40, 0, -40)
 cube.rotation.y = 1;
 scene.add( cube );
+
+//////////////////
+//Adding Banner///
+//////////////////
+
+var material3 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('../textures/hbd.png') , shininess: 15, side: THREE.DoubleSide});
+var geometry3 = new THREE.BoxGeometry( 120, 45, 2 );
+var banner = new THREE.Mesh( geometry3, material3 );
+banner.position.set(50, 30, -20)
+scene.add( banner );
 
 //////////////////
 //Adding Sphere///
@@ -34,12 +44,25 @@ var sphere = new THREE.Mesh( geometry2, material2 );
 sphere.position.set(20, -40, 40);
 scene.add( sphere );
 
+//////////////////
+//Adding Grass////
+//////////////////
+
+var material4 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('../textures/grass.jpg') , shininess: 15, side: THREE.DoubleSide});
+var geometry4 = new THREE.BoxGeometry( 350, 466, 2 );
+var grass = new THREE.Mesh( geometry4, material4 );
+grass.position.set(-80, -100, -60)
+grass.rotation.x = -0.7;
+grass.rotation.y = 0.1;
+grass.rotation.z = -0.2;
+scene.add( grass );
+
 ///////////////
 //Adding Text//
 ///////////////
 
 var materialFront = new THREE.MeshPhongMaterial({color: 0x696969, emissive: 0x696969, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
-var materialSide = new THREE.MeshPhongMaterial({color: 0x0000FF, emissive: 0x696969, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
+var materialSide = new THREE.MeshPhongMaterial({color: 0xff9933, emissive: 0xff9933, specular:0x696969, shininess: 15, side: THREE.DoubleSide});
 var materialArray = [ materialFront, materialSide ];
 var textGeom = new THREE.TextGeometry( "Happy Birthday", 
 {
@@ -63,10 +86,10 @@ scene.add( textMesh );
 //Adding Lights//
 /////////////////
 
-var light = new THREE.AmbientLight( 0x404040 ); // soft white light
+var light = new THREE.AmbientLight( 0x565656 ); // soft white light
 scene.add( light );
 
-var light1 = new THREE.PointLight( 0xffffff, 1, 4500 );
+var light1 = new THREE.PointLight( 0xffffff, 1, 5500 );
 light1.position.set( 0, 10, 50 );
 scene.add( light1 );
 
@@ -90,15 +113,7 @@ function render() {
 
 	//WASD
 	if(keyboard.pressed('W')) {
-		var radians = camera.rotation.y;
-		var degrees = radians * (180/Math.PI);
-		if (degrees > 90 || degrees < -90) {
-			camera.position.z += 1
-		}
-
-		else {
-			camera.position.z -= 1;
-		}
+		camera.position.z -= 1;
 		
 	}
 
@@ -107,15 +122,7 @@ function render() {
 	}
 
 	if(keyboard.pressed('S')) {
-		var radians = camera.rotation.y;
-		var degrees = radians * (180/Math.PI);
-		if (degrees > 90 || degrees < -90) {
-			camera.position.z -= 1
-		}
-
-		else {
-			camera.position.z += 1;
-		}
+		camera.position.z += 1;
 		
 	}
 
@@ -125,15 +132,7 @@ function render() {
 
 	//Arrow Keys
 	if(keyboard.pressed('up')) {
-		var radians = camera.rotation.y;
-		var degrees = radians * (180/Math.PI);
-		if (degrees > 90 || degrees < -90) {
-			camera.position.z += 1
-		}
-
-		else {
-			camera.position.z -= 1;
-		}
+		camera.position.z -= 1;
 	}
 
 	if(keyboard.pressed('left')) {
@@ -142,16 +141,7 @@ function render() {
 	}
 
 	if(keyboard.pressed('down')) {
-		var radians = camera.rotation.y;
-		var degrees = radians * (180/Math.PI);
-		if (degrees > 90 || degrees < -90) {
-			camera.position.z -= 1
-		}
-
-		else {
-			camera.position.z += 1;
-		}
-	}
+		camera.position.z += 1;	}
 
 	if(keyboard.pressed('right')) {
 		camera.rotation.y -= 0.02;
@@ -161,6 +151,8 @@ function render() {
 
 	sphere.rotation.x += 0.002;
 	sphere.rotation.y += 0.01;
+
+	banner.rotation.y += 0.004;
 
 
 	renderer.render( scene, camera );
