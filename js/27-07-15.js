@@ -32,8 +32,6 @@ var textGeom = new THREE.TextGeometry( "Happy Birthday",
 	bevelThickness: 0.5, bevelSize: 0.5, bevelEnabled: true,
 	material: 0, extrudeMaterial: 1
 });
-	// font: helvetiker, gentilis, droid sans, droid serif, optimer
-	// weight: normal, bold
 	
 var textMaterial = new THREE.MeshFaceMaterial(materialArray);
 var textMesh = new THREE.Mesh(textGeom, textMaterial );
@@ -47,6 +45,22 @@ scene.add(textMesh);
 var light1 = new THREE.PointLight( 0xffffff, 1, 4500 );
 light1.position.set( 0, 10, 50 );
 scene.add( light1 );
+
+window.addEventListener( 'resize', onWindowResize, false );
+
+function onWindowResize() {
+
+	windowHalfX = window.innerWidth / 2;
+	windowHalfY = window.innerHeight / 2;
+
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+
+	renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
+
 
 function render() {
 	requestAnimationFrame( render );
@@ -92,6 +106,7 @@ function render() {
 	}
 
 
+	textMesh.rotation.x += 0.01;;
 
 	cube.rotation.x += 0.001;
 	cube.rotation.y += 0.01;
