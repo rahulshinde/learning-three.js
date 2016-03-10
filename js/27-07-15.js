@@ -17,7 +17,7 @@ container.appendChild( renderer.domElement );
 //Adding Flowers//
 //////////////////
 
-var material = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('../textures/rudbekia.jpg') , shininess: 15, side: THREE.DoubleSide});
+var material = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('textures/rudbekia.jpg') , shininess: 15, side: THREE.DoubleSide});
 var geometry = new THREE.BoxGeometry( 60, 50, 2 );
 var cube = new THREE.Mesh( geometry, material );
 cube.position.set(-40, 0, -40)
@@ -28,7 +28,7 @@ scene.add( cube );
 //Adding Banner///
 //////////////////
 
-var material3 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('../textures/hbd.png') , shininess: 15, side: THREE.DoubleSide});
+var material3 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('textures/hbd.png') , shininess: 15, side: THREE.DoubleSide});
 var geometry3 = new THREE.BoxGeometry( 120, 45, 2 );
 var banner = new THREE.Mesh( geometry3, material3 );
 banner.position.set(50, 30, -20)
@@ -38,7 +38,7 @@ scene.add( banner );
 //Adding Sphere///
 //////////////////
 var geometry2 = new THREE.SphereGeometry( 15, 32, 32 );
-var material2 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('../textures/cs-back.gif') , specular:0x696969, shininess: 15, side: THREE.DoubleSide});
+var material2 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('textures/cs-back.gif') , specular:0x696969, shininess: 15, side: THREE.DoubleSide});
 
 var sphere = new THREE.Mesh( geometry2, material2 );
 sphere.position.set(20, -40, 40);
@@ -48,7 +48,7 @@ scene.add( sphere );
 //Adding Grass////
 //////////////////
 
-var material4 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('../textures/grass.jpg') , shininess: 15, side: THREE.DoubleSide});
+var material4 = new THREE.MeshPhongMaterial({ map:THREE.ImageUtils.loadTexture('textures/grass.jpg') , shininess: 15, side: THREE.DoubleSide});
 var geometry4 = new THREE.BoxGeometry( 350, 466, 2 );
 var grass = new THREE.Mesh( geometry4, material4 );
 grass.position.set(-80, -100, -60)
